@@ -6,7 +6,7 @@ body{
     height: 100%;
     overflow-y: hidden;
     background: #FFA500;
-    background: linear-gradient(315deg, #ee9617 0%, #fe5858 74%);
+    background: linear-gradient(135deg, hsla(33, 88%, 45%, 1) 0%, hsla(33, 100%, 53%, 1) 29%, hsla(42, 100%, 60%, 1) 62%, hsla(58, 100%, 68%, 1) 100%);
 
     font-family: 'Poppins', sans-serif;
     display: flex;
