@@ -68,7 +68,7 @@ form section{
 }
 
 
-#chargenote-submit button, 
+button, 
 #chargenote-reset {
     height: 40px;
     width: 250px;
@@ -83,7 +83,7 @@ form section{
     font-family: 'Poppins', sans-serif;
 }
 
-#chargenote-submit button:hover, 
+button:hover, 
 #chargenote-reset:hover {
     height: 40px;
     width: 250px;
