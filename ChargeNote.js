@@ -15,15 +15,23 @@ const submitchargenote = (event) => {
 
     const story = `
         <h3>Your completed Note:</h3>
-        <p>First Name: <span class="inserted-text">${userSubmission.Fname}</span> <br>
-        Last Name: <span class="inserted-text">${userSubmission.Lname}</span> <br>
-        Phone Number: <span class="inserted-text">${userSubmission.PN}</span> <br>
-        Email: <span class="inserted-text">${userSubmission.Email}</span> <br>
-        Station Number / Port: <span class="inserted-text">${userSubmission.Station}</span> <br> Car Make: <span class="inserted-text">${userSubmission.Cmake}</span> <br> Car Model: <span class="inserted-text">${userSubmission.Cmod}</span> 
-<br> 	Resolution: <span class="inserted-text">${userSubmission.Res}</span>
-
-</p>
-    `;
+    <p>
+        First Name: <span class="inserted-text">${userSubmission.Fname}</span>
+        <br>
+        Last Name: <span class="inserted-text">${userSubmission.Lname}</span>
+        <br>
+        Phone Number: <span class="inserted-text">${userSubmission.PH}</span>
+        <br>
+        Email: <span class="inserted-text">${userSubmission.Email}</span>
+        <br>
+        Station Number / Port: <span class="inserted-text">${userSubmission.Station}</span>
+        <br>
+        Car Make: <span class="inserted-text">${userSubmission.Cmake}</span>
+        <br>
+        Car Model: <span class="inserted-text">${userSubmission.Cmod}</span>
+        <br>
+        Resolution: <span class="inserted-text">${userSubmission.Res}</span>
+        </p>`;
 
     storySection.innerHTML += story;
     storySection.classList.remove('hide');
@@ -106,3 +114,23 @@ document.getElementById('cancelNameButton').addEventListener('click', () => {
     nameCard.style.display = 'none';
   });
   
+///////////// Clipboard /////////
+function copyToClipboard() {
+    // Get the generated note text
+    const noteText = storySection.textContent;
+  
+    // Create a temporary textarea element to copy the text to the clipboard
+    const tempTextArea = document.createElement('textarea');
+    tempTextArea.value = noteText;
+    document.body.appendChild(tempTextArea);
+  
+    // Select and copy the text from the textarea
+    tempTextArea.select();
+    document.execCommand('copy');
+  
+    // Remove the temporary textarea
+    document.body.removeChild(tempTextArea);
+  
+    // Show a confirmation or feedback to the user (optional)
+    alert('Note copied to clipboard!');
+  }
