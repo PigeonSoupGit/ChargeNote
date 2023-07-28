@@ -92,4 +92,17 @@ function updateDateWithUserName(userName) {
     // Update the time every minute using setInterval
     setInterval(updateTime, 60000); // 60000 milliseconds = 1 minute
   }
+
+  // Check for the username on page load and update date and time
+window.addEventListener('load', () => {
+    const savedName = localStorage.getItem('userName');
+    if (savedName) {
+      updateDateTimeWithUserName(savedName);
+    }
+  });
+
+  // Handle the "Cancel" button click to close the name prompt
+document.getElementById('cancelNameButton').addEventListener('click', () => {
+    nameCard.style.display = 'none';
+  });
   
