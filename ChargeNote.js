@@ -41,12 +41,6 @@ const resetchargenote = () => {
     chargenoteForm.classList.remove('hide');
 }
 
-	var date = new Date();
-	var current_date = "&lt;!-- Mitchell - " + date.getDate()+"/"+(date.getMonth()+1)+"/"+date.getFullYear();
-	var current_time = date.getHours()+":"+date.getMinutes();
-	var date_time = current_date+" "+current_time;	
-	document.getElementById("p1").innerHTML = date_time;
-
     // Handle the button click to show the card/modal
 nameButton.addEventListener('click', () => {
     nameCard.style.display = 'block';
@@ -54,14 +48,48 @@ nameButton.addEventListener('click', () => {
   
   // Handle the "Save" button click to save the user's name
   saveNameButton.addEventListener('click', () => {
-    const userName = nameInput.value.trim(); // Get the input value and remove leading/trailing whitespaces
+    const userName = nameInput.value.trim(); // Get the input value and remove leading/trailing whitespaces  
   
-    // Check if the user has entered a name
-    if (userName !== '') {
-      // Save the name as a variable or do whatever you want with it
-      alert(`Hello, ${userName}!`); // For example, show a welcome message with the user's name
-      nameCard.style.display = 'none'; // Hide the card/modal after saving the name
-    } else {
-      alert('Please enter your name.'); // Show an error message if the name field is empty
-    }
-  });
+     // Check if the user has entered a name
+  if (userName !== '') {
+    // Save the name to local storage
+    localStorage.setItem('userName', userName);
+    nameCard.style.display = 'none'; // Hide the card/modal after saving the name
+    // Update the date and time with the username
+    updateDateTimeWithUserName(userName);
+  } else {
+    alert('Please enter your name.'); // Show an error message if the name field is empty
+  }
+  // Check if the user's name is already stored in local storage
+const savedName = localStorage.getItem('userName');
+if (savedName) {
+  // Update the date and time with the saved username
+  updateDateTimeWithUserName(savedName);
+}
+});
+
+// Function to update the date with the username
+function updateDateWithUserName(userName) {
+    var date = new Date();
+    var current_date = "<!-- " + `${userName} ${date.getDate()}/${date.getMonth() + 1}/${date.getFullYear()}` + "  ";
+    return current_date;
+  }
+  
+  // Function to update the time
+  function updateTime() {
+    var date = new Date();
+    var current_time = date.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+    var timeElement = document.getElementById("time");
+    timeElement.textContent = current_time;
+  }
+  
+  // Function to update date, time, and username
+  function updateDateTimeWithUserName(userName) {
+    var dateElement = document.getElementById("date");
+    dateElement.textContent = updateDateWithUserName(userName);
+    updateTime(); // Call updateTime to set the initial time
+  
+    // Update the time every minute using setInterval
+    setInterval(updateTime, 60000); // 60000 milliseconds = 1 minute
+  }
+  
