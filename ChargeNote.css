@@ -73,7 +73,7 @@ button,
 #chargenote-reset {
     height: 40px;
     width: 250px;
-    background-color: #FFA500;
+    background-color: #ffbf00;
     color: #ffffff;
     border-color: #ffffff;
     border-width: 2px;
@@ -89,7 +89,7 @@ button:hover,
 #chargenote-reset:hover {
     height: 40px;
     width: 250px;
-    background-color: #ffbf00;
+    background-color: #fcc932;
     border-color: #ffffff;
     border-width: 2px;
     border-radius: 20px;
@@ -112,6 +112,7 @@ div.fixed {
   width: 300px;
   border: 3px solid White;
   background-color: #FFA500;
+  color: white;
   border-radius: 20px;
 
 }
@@ -201,3 +202,19 @@ div.fixed {
     padding-left: 10px;
     margin: 3px 0 10px;
 }
+
+/* Hide the default scrollbar */
+::-webkit-scrollbar {
+    width: 0;
+    background: transparent;
+  }
+  
+  /* Style the scrollbar thumb (draggable part) as needed (optional) */
+  ::-webkit-scrollbar-thumb {
+    background: transparent;
+  }
+  
+  /* Style the scrollbar track (optional) */
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
