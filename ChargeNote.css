@@ -56,7 +56,8 @@ form section{
 .input-group input[type="text"] {
     height: 30px;
     width: 250px;
-    border: 1px solid #edede8;
+    border: 1px solid #ffffff;
+    background-color: #ffd050;
     border-radius: 20px;
     box-shadow: rgba(99, 99, 99, 0.1) 0px 2px 2px 0px;
     padding-left: 10px;
@@ -73,7 +74,8 @@ button,
     height: 40px;
     width: 250px;
     background-color: #FFA500;
-    border-color: #edede8;
+    color: #ffffff;
+    border-color: #ffffff;
     border-width: 2px;
     border-radius: 20px;
     padding: 10px;
@@ -88,7 +90,7 @@ button:hover,
     height: 40px;
     width: 250px;
     background-color: #ffbf00;
-    border-color: #edede8;
+    border-color: #ffffff;
     border-width: 2px;
     border-radius: 20px;
     padding: 10px;
@@ -103,11 +105,15 @@ button:hover,
 }
 
 div.fixed {
+  text-align: center;
   position: fixed;
-  bottom: 0;
-  right: 0;
+  bottom: 10px;
+  right: 10px;
   width: 300px;
   border: 3px solid White;
+  background-color: #FFA500;
+  border-radius: 20px;
+
 }
 
 #completed-chargenote{
@@ -121,7 +127,7 @@ div.fixed {
 .inserted-text{
     border-bottom: 3px solid FFA500;
     font-weight: 700;
-    background-color: white;
+    background-color: #ffd050;
     padding: 0 5px;
     margin: 0 5px;
 }
@@ -173,12 +179,25 @@ div.fixed {
   #nameCard > div {
     background-color: #FFA500;
     padding: 20px;
-    border: 1px solid #ccc;
+    border: 2px solid #ffffff;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     text-align: center; /* Center the text content inside the div */
     margin-bottom: 10px;
+    border-bottom-left-radius: 5%;
+    border-bottom-right-radius: 5%;
   }
 
   #nameCard button {
     margin: 15px;
   }
+
+  #nameCard input[type="text"] {
+    height: 30px;
+    width: 250px;
+    border: 1px solid #ffffff;
+    background-color: #ffd050;
+    border-radius: 20px;
+    box-shadow: rgba(99, 99, 99, 0.1) 0px 2px 2px 0px;
+    padding-left: 10px;
+    margin: 3px 0 10px;
+}
