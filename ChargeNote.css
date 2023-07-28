@@ -147,9 +147,13 @@ div.fixed {
 }
 
 #nameButton {
+    opacity: .5;
     position: fixed;
+    text-align: center;
     bottom: 10px;
     left: 10px;
+    width: 120px; /* Set the desired width for the button */
+    height: 60px; /* Set the desired height for the button */
   }
 
   #nameCard {
@@ -167,10 +171,14 @@ div.fixed {
 
   /* Center the inner content using Flexbox */
   #nameCard > div {
-    background-color: #f0f0f0;
-    padding: 10px;
+    background-color: #FFA500;
+    padding: 20px;
     border: 1px solid #ccc;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     text-align: center; /* Center the text content inside the div */
+    margin-bottom: 10px;
   }
 
+  #nameCard button {
+    margin: 15px;
+  }
