@@ -1,5 +1,9 @@
 const chargenoteForm = document.getElementById('chargenote-form');
 const storySection = document.getElementById('completed-chargenote');
+const nameButton = document.getElementById('nameButton');
+const nameCard = document.getElementById('nameCard');
+const nameInput = document.getElementById('nameInput');
+const saveNameButton = document.getElementById('saveNameButton');
 
 const submitchargenote = (event) => {
     //required to prevent the form from reloading on submit
@@ -42,3 +46,22 @@ const resetchargenote = () => {
 	var current_time = date.getHours()+":"+date.getMinutes();
 	var date_time = current_date+" "+current_time;	
 	document.getElementById("p1").innerHTML = date_time;
+
+    // Handle the button click to show the card/modal
+nameButton.addEventListener('click', () => {
+    nameCard.style.display = 'block';
+  });
+  
+  // Handle the "Save" button click to save the user's name
+  saveNameButton.addEventListener('click', () => {
+    const userName = nameInput.value.trim(); // Get the input value and remove leading/trailing whitespaces
+  
+    // Check if the user has entered a name
+    if (userName !== '') {
+      // Save the name as a variable or do whatever you want with it
+      alert(`Hello, ${userName}!`); // For example, show a welcome message with the user's name
+      nameCard.style.display = 'none'; // Hide the card/modal after saving the name
+    } else {
+      alert('Please enter your name.'); // Show an error message if the name field is empty
+    }
+  });
