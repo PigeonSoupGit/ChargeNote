@@ -154,11 +154,23 @@ div.fixed {
 
   #nameCard {
     display: none;
-    position: absolute;
+    position: fixed;
     top: 0;
-    left: 120px; /* Adjust this value to control the horizontal distance from the nameButton */
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Optional: add a semi-transparent background */
+    align-items: center;
+    justify-content: center;
+    display: flex;
+  }
+
+  /* Center the inner content using Flexbox */
+  #nameCard > div {
     background-color: #f0f0f0;
     padding: 10px;
     border: 1px solid #ccc;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Center the text content inside the div */
   }
+
