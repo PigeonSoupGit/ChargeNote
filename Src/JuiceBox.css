@@ -1,0 +1,83 @@
+h4{
+color: white;
+margin: 5% 0 2% 0;
+}
+
+body {
+    color: white;
+  }
+  input[type="number"], input[type="range"] {
+    width: 90%;
+    margin-bottom: 10px;
+    background-color: #ffd256;
+  }
+
+
+
+  #chargingTimeResult {
+    font-size: larger;
+    font-weight: bolder;
+    margin-top: 10%;
+    color: white;
+
+
+  }
+
+  #chargerPower{
+    color: white;
+
+
+  }
+
+  #batterySize{
+    color: white;
+
+  }
+
+  input[type="range"] {
+    appearance: none;
+    width: 90%;
+    height: 8px;
+    border-radius: 5px;
+    background: #ffd050;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: opacity 0.2s;
+    transition: opacity 0.2s;
+  }
+
+  input[type="range"]::-webkit-slider-runnable-track {
+    height: 8px;
+    border-radius: 5px;
+    background: #ffd256;
+  }
+  
+  input[type="range"]::-moz-range-track {
+    height: 8px;
+    border-radius: 5px;
+    background: #fff;
+  }
+  
+  input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 16px;
+    height: 16px;
+    border-radius: 100%;
+    background: #fff;
+    margin-top: -4px; /* Adjust the position to center vertically */
+    cursor: pointer;
+  }
+  
+  input[type="range"]::-moz-range-thumb {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #fff;
+    cursor: pointer;
+    margin-top: -4px; /* Adjust the position to center vertically */
+  }
+  
+  input[type="range"]:hover {
+    opacity: 1;
+  }
+  
